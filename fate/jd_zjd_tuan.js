@@ -81,6 +81,7 @@ function getCookies() {
 
 function JoinTuan(extra) {
     const body = {...extra, channel: 'FISSION_BEAN'};
+    $.log(body);
     return new Promise(resolve => {
         $.get(taskTuanUrl('vvipclub_distributeBean_assist', body), async (err, resp, data) => {
             try {
